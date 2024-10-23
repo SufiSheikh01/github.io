@@ -1,22 +1,26 @@
-# Sufi'S Portfolio
-# Spending-Beheaviour-Of-Customer
-# [Project 1:- Spending behaviour analysis of customer and to identify the most spending segemnt]
-# Tasks
-•	Monthly spend of each customer.
-•	Monthly repayment of each customer.
-•	Highest paying 10 customers.
-•	People in which segment are spending more money.
-•	Which age group is spending more money?
-•	Which is the most profitable segment?
-•	In which category the customers are spending more money?
-•	Monthly profit for the bank.
-•	Impose an interest rate of 2.9% for each customer for any due amount
-Here's our logo (hover to see the title text):
+# Sufi's Portfolio
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+## Spending Behavior of Customers
 
-Reference-style: 
-![alt text][logo]
+### Project 1: Spending Behavior Analysis of Customers and Identifying the Most Spending Segment
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+#### Tasks
+<details>
+  <summary>Click to expand tasks</summary>
+  
+  - Monthly spend of each customer.
+  - Monthly repayment of each customer.
+  - Highest paying 10 customers.
+  - People in which segment are spending more money.
+  - Which age group is spending more money?
+  - Which is the most profitable segment?
+  - In which category the customers are spending more money?
+  - Monthly profit for the bank.
+  - Impose an interest rate of 2.9% for each customer for any due amount.
+
+</details>
+
+#### Relevant Image:
+![Data Analysis Image](https://example.com/data-analysis-image.png "Data Insights")
+
+
