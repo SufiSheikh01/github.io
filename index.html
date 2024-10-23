@@ -1,238 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sufi Sheikh's Portfolio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji|Open+Sans:300,400,600,700" rel="stylesheet">
-    
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Meyawo Theme Colors */
-        :root {
-            --primary: #695aa6; /* Indigo/purple */
-            --secondary: #393e46; /* Dark gray */
-            --light: #f8f9fa; /* Light background */
-            --dark: #212529; /* Dark background */
-            --text-color: #333333; /* Default text color */
-        }
-
-        /* Global Styling */
         body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--light);
-            color: var(--text-color);
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6; /* Improves readability */
+            background-color: #f0f0f0;
         }
-
-        /* Navbar */
-        nav {
-            background-color: var(--dark);
-            padding: 1rem;
-            text-align: center;
-        }
-
-        /* Navbar links styled as rounded buttons */
-        nav a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #393e46; /* Light gray background for the buttons */
+        header {
+            background-color: #695aa6; /* Main color for header */
             color: white;
-            margin: 0 10px;
+            padding: 20px;
+            text-align: left;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: #ffffff; /* White background for content sections */
+        }
+        .about {
+            background-color: #e2e2e2; /* Subtle color for About Me */
+        }
+        .interests {
+            background-color: #d9d9d9; /* Subtle color for Interests */
+        }
+        .cv-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 10px 20px;
+            background-color: #7c7c7c; /* Subtle color for CV button */
+            color: white;
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            transition: background-color 0.3s ease;
         }
-
-        /* Hover effect for the buttons */
-        nav a:hover {
-            background-color: #495057;
-        }
-
-        /* Header Section */
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 4rem 1rem; /* Responsive padding */
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem; /* Adjusted for better responsiveness */
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1.25rem;
-            margin-top: 1rem;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 2rem 1rem; /* Responsive padding */
-            margin: 2rem auto;
-            background-color: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            max-width: 1000px;
-            border-radius: 10px;
-        }
-
-        h2 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        /* Interests Section Styling */
-        #interests ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-direction: column; /* Aligns items in a column (vertical) */
-            align-items: center;
-        }
-
-        #interests ul li {
-            background-color: #f0f4f8;
-            padding: 10px 20px;
-            margin: 10px 0;
-            border-radius: 15px;
-            width: 80%; /* Adjusted width for responsiveness */
-            text-align: center;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Project Section Styling (Hyperlinks) */
-        #projects ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #projects ul li a {
-            text-decoration: none;
-            color: #695aa6;
-            font-weight: bold;
-        }
-
-        #projects ul li a:hover {
-            color: #393e46;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem; /* Responsive padding */
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem; /* Adjust header font size for smaller screens */
-            }
-
-            header p {
-                font-size: 1rem; /* Adjust paragraph font size for smaller screens */
-            }
-
-            nav a {
-                padding: 8px 15px; /* Adjust button size */
-            }
-
-            #interests ul li {
-                width: 90%; /* Wider interest boxes on smaller screens */
-            }
-
-            section {
-                padding: 1rem; /* Less padding on smaller screens */
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav a {
-                padding: 5px 10px; /* Further adjust button size for very small screens */
-            }
+        .cv-button:hover {
+            background-color: #999999; /* Hover effect for CV button */
         }
     </style>
 </head>
-
 <body>
-    <!-- Navbar -->
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#interests">My Interests</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
     <!-- Header Section -->
     <header>
         <h1>Sufi Sheikh</h1>
-        <p>Data Enthusiast | Decission Making | Data Visualization</p>
+        <p>Data Enthusiast | SQL Expert | Data Visualization</p>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#interests">My Interests</a>
+            <a href="sufi_sheikh_cv.pdf" class="cv-button" download>Download CV</a>
+        </nav>
     </header>
 
     <!-- About Me Section -->
-    <section id="about">
+    <section class="about" id="about">
         <h2>About Me</h2>
-        <p>Hello! I’m Sufi Sheikh, a passionate data enthusiast dedicated to turning data into actionable insights. 
-            Proficient in SQL, SAS, and data visualization tools like Power BI, I thrive on using data to drive informed business decisions.
-            My background in the home loan department has taught me valuable lessons in credit analysis and relationship building,
-            allowing me to assess customer credibility effectively. While I gained significant experience in banking, my true passion lies in data analytics. 
-            I’m excited to apply my analytical skills and problem-solving mindset to contribute to innovative, 
-            data-driven projects that propel organizations forward..</p>
+        <p>I am passionate about data analytics and visualization. With a background in commerce and computer applications, I strive to blend my technical skills with business acumen.</p>
     </section>
 
-    <!-- My Interests Section -->
-    <section id="interests">
+    <!-- Interests Section -->
+    <section class="interests" id="interests">
         <h2>My Interests</h2>
-        <ul>
-            <li>Data Analytics</li>
-            <li>Business Intelligence & Visualization</li>
-            <li>Artificial Intelligence & Machine Learning</li>
-        </ul>
+        <p>In addition to data analytics, I enjoy exploring new technologies, reading about business strategies, and learning new programming languages.</p>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-
-        <h3>Projects</h3>
-        <ul>
-            <li><a href="about:blank">Customer Spending Behavior Analysis</a></li>
-            <li><a href="about:blank">Sales Data Reporting for Retail Stores</a></li>
-        </ul>
-
-        <h3>SAS Projects</h3>
-        <ul>
-            <li><a href="about:blank">Predictive Modeling for Customer Churn</a></li>
-        </ul>
-
-        <h3>Data Visualization Projects</h3>
-        <ul>
-            <li><a href="about:blank">Interactive Sales Dashboards with Power BI</a></li>
-        </ul>
-    </section>
-
-    <!-- Footer Section -->
-    <footer id="contact">
-        <p>Contact me: <a href="mailto:sufi@example.com">sufi@example.com</a></p>
-        <p>Find me on <a href="https://github.com/sufisheikh01">GitHub</a> | <a href="https://linkedin.com/in/sufi-sheikh">LinkedIn</a></p>
-    </footer>
 </body>
-
 </html>
