@@ -4,157 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sufi's Portfolio</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f4f8;
-            color: #333333;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Navbar Styling */
-        nav {
-            background-color: #0044cc;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Header Styling */
-        header {
-            background-color: #008080;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 3rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: white;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            border-bottom: 2px solid #0044cc;
-            padding-bottom: 0.5rem;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        ul {
-            list-style-type: square;
-            margin-left: 2rem;
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color: #0044cc;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+    <title>Sufi Sheikh's Portfolio</title>
+    <!-- Link to Meyawo Theme CSS -->
+    <link rel="stylesheet" href="meyawo.css">
+    <!-- Google Fonts (if needed) -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji|Open+Sans:300,400,600,700" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#interests">My Interests</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sufi's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <!-- Header -->
-    <header>
-        <h1>Sufi Sheikh</h1>
-        <p>Data Enthusiast | SQL Expert | Data Visualization</p>
+    <!-- Header Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Sufi Sheikh</h1>
+            <p class="lead">Data Enthusiast | SQL & SAS Expert | Data Visualization</p>
+        </div>
     </header>
 
     <!-- About Me Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I’m Sufi Sheikh, a data enthusiast with a strong background in data analytics. I have experience in SQL, SAS, and data visualization tools like Power BI. I’m passionate about transforming raw data into actionable insights that drive better business decisions.</p>
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-secondary">About Me</h2>
+            <p>Hello! I’m Sufi Sheikh, a data enthusiast with expertise in SQL, SAS, and data visualization tools like Power BI. I love working with data to derive insights and drive business decisions.</p>
+        </div>
     </section>
 
     <!-- My Interests Section -->
-    <section id="interests">
-        <h2>My Interests</h2>
-        <ul>
-            <li>Data Analytics</li>
-            <li>SQL Query Optimization</li>
-            <li>Business Intelligence & Visualization</li>
-            <li>Machine Learning</li>
-            <li>Solving Real-World Problems with Data</li>
-        </ul>
+    <section id="interests" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-secondary">My Interests</h2>
+            <ul>
+                <li>Data Analytics</li>
+                <li>SQL Query Optimization</li>
+                <li>Business Intelligence & Visualization</li>
+                <li>Machine Learning</li>
+            </ul>
+        </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-secondary">Projects</h2>
+            <h3>SQL Projects</h3>
+            <ul>
+                <li>Customer Spending Behavior Analysis</li>
+                <li>Sales Data Reporting for Retail</li>
+            </ul>
 
-        <!-- SQL Projects -->
-        <h3>SQL Projects</h3>
-        <p>Here are some of the SQL projects I’ve worked on:</p>
-        <ul>
-            <li>Customer Spending Behavior Analysis</li>
-            <li>Sales Data Reporting for Retail Stores</li>
-            <li>Data Cleaning and Optimization for Large Databases</li>
-        </ul>
+            <h3>SAS Projects</h3>
+            <ul>
+                <li>Predictive Modeling for Customer Churn</li>
+            </ul>
 
-        <!-- SAS Projects -->
-        <h3>SAS Projects</h3>
-        <p>These are some of the projects I’ve developed using SAS:</p>
-        <ul>
-            <li>Predictive Modeling for Customer Churn</li>
-            <li>Financial Forecasting for Small Businesses</li>
-            <li>Risk Analysis for Loan Applications</li>
-        </ul>
-
-        <!-- Data Visualization Projects -->
-        <h3>Data Visualization Projects</h3>
-        <p>Check out some visualizations I’ve created:</p>
-        <ul>
-            <li>Interactive Sales Dashboards with Power BI</li>
-            <li>Customer Demographics and Segmentation with Tableau</li>
-            <li>Market Trend Visualizations for E-commerce Data</li>
-        </ul>
+            <h3>Data Visualization Projects</h3>
+            <ul>
+                <li>Interactive Dashboards with Power BI</li>
+            </ul>
+        </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer id="contact">
-        <p>Contact me: <a href="mailto:sufisk9789@gmail.com.com">sufisk9789@gmail.com</a></p>
-        <p>Find me on <a href="https://github.com/sufisheikh01">GitHub</a> | <a href="https://linkedin.com/in/sufi-sheikh">LinkedIn</a></p>
+    <!-- Contact Section -->
+    <footer id="contact" class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>Contact me: <a href="mailto:sufi@example.com" class="text-white">sufi@example.com</a></p>
+            <p>Find me on <a href="https://github.com/sufisheikh01" class="text-white">GitHub</a> | <a href="https://linkedin.com/in/sufi-sheikh" class="text-white">LinkedIn</a></p>
+        </div>
     </footer>
+
 </body>
 
 </html>
