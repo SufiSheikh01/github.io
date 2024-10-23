@@ -34,11 +34,23 @@
             text-align: center;
         }
 
+        /* Navbar links styled as rounded buttons */
         nav a {
+            display: inline-block; /* Makes each link behave like a button */
+            padding: 10px 20px; /* Adds space inside the buttons */
+            background-color: #393e46; /* Light gray background for the buttons */
             color: white;
-            margin: 0 1rem;
+            margin: 0 10px; /* Adds space between the buttons */
+            border-radius: 25px; /* Rounds the edges */
             text-decoration: none;
             font-weight: bold;
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        /* Hover effect for the buttons */
+        nav a:hover {
+            background-color: #495057; /* Slightly darker background on hover */
+            color: white; /* Keeps the text white */
         }
 
         /* Header Section */
@@ -77,14 +89,39 @@
             text-align: center;
         }
 
-        ul {
+        /* Interests Section Styling */
+        #interests ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Aligns items in a column (vertical) */
+            align-items: center;
+        }
+
+        #interests ul li {
+            background-color: #f0f4f8; /* Light background for each interest */
+            padding: 10px 20px; /* Adds some padding inside the box */
+            margin: 10px 0; /* Adds spacing between the boxes */
+            border-radius: 15px; /* Rounded edges for each box */
+            width: 60%; /* Limits the width of each interest box */
+            text-align: center; /* Centers the text */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for a 3D effect */
+        }
+
+        /* Project Section Styling (Hyperlinks) */
+        #projects ul {
             list-style: none;
             padding: 0;
         }
 
-        ul li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--light);
+        #projects ul li a {
+            text-decoration: none; /* Removes underline from links */
+            color: #695aa6; /* Same violet color as theme */
+            font-weight: bold; /* Makes the links bold */
+        }
+
+        #projects ul li a:hover {
+            color: #393e46; /* Changes color on hover */
         }
 
         /* Footer */
@@ -145,18 +182,18 @@
 
         <h3>SQL Projects</h3>
         <ul>
-            <li>Customer Spending Behavior Analysis</li>
-            <li>Sales Data Reporting for Retail Stores</li>
+            <li><a href="about:blank">Customer Spending Behavior Analysis</a></li>
+            <li><a href="about:blank">Sales Data Reporting for Retail Stores</a></li>
         </ul>
 
         <h3>SAS Projects</h3>
         <ul>
-            <li>Predictive Modeling for Customer Churn</li>
+            <li><a href="about:blank">Predictive Modeling for Customer Churn</a></li>
         </ul>
 
         <h3>Data Visualization Projects</h3>
         <ul>
-            <li>Interactive Sales Dashboards with Power BI</li>
+            <li><a href="about:blank">Interactive Sales Dashboards with Power BI</a></li>
         </ul>
     </section>
 
