@@ -1,6 +1,6 @@
 # Sufi'S Portfolio
 # Spending-Beheaviour-Of-Customer
-# (Project 1:- Spending behaviour analysis of customer and to identify the most spending segemnt)
+# [Project 1:- Spending behaviour analysis of customer and to identify the most spending segemnt]
 # Tasks
 •	Monthly spend of each customer.
 •	Monthly repayment of each customer.
