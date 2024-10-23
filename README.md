@@ -4,9 +4,8 @@
 
 ### Project 1: Spending Behavior Analysis of Customers and Identifying the Most Spending Segment
 
-#### Tasks
 <details>
-  <summary>Click to expand tasks</summary>
+  <summary>Tasks Performed</summary>
   
   - Monthly spend of each customer.
   - Monthly repayment of each customer.
@@ -19,8 +18,5 @@
   - Impose an interest rate of 2.9% for each customer for any due amount.
 
 </details>
-
-#### Relevant Image:
-![Data Analysis Image](https://example.com/data-analysis-image.png "Data Insights")
 
 
