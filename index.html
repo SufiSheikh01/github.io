@@ -14,7 +14,6 @@
             --nav-background: #4B6584; /* Soft dark blue for nav bar */
             --primary-background: #FFFFFF; /* Clean white for main section */
             --highlight: #3FC1C9; /* Soft teal for highlights */
-            --secondary-background: #F7D794; /* Light gold for about/interests */
             --text-color: #333333;
         }
 
@@ -51,7 +50,7 @@
         }
 
         nav a:hover {
-            color: var(--secondary-background);
+            color: var(--highlight);
         }
 
         .nav-icons {
@@ -62,6 +61,12 @@
         .nav-icons a {
             margin-left: 15px;
             font-size: 1.2rem;
+        }
+
+        .nav-icons img {
+            width: 24px;
+            height: auto;
+            vertical-align: middle;
         }
 
         /* Hero Section - Intro */
@@ -84,10 +89,10 @@
             margin-top: 1rem;
         }
 
-        /* About Section with Circle Shape */
+        /* About Section */
         #about {
             padding: 3rem 1rem;
-            background-color: var(--secondary-background);
+            background-color: var(--primary-background); /* Clean white background */
             text-align: center;
         }
 
@@ -130,7 +135,7 @@
             font-weight: 500;
         }
 
-        /* Projects Section with Color Change */
+        /* Projects Section */
         #projects {
             padding: 3rem 1rem;
             background-color: var(--highlight);
@@ -159,7 +164,7 @@
         }
 
         #projects ul li a {
-            color: var(--secondary-background);
+            color: var(--primary-background);
             text-decoration: none;
         }
 
@@ -176,7 +181,7 @@
         }
 
         footer a {
-            color: var(--secondary-background);
+            color: var(--highlight);
             text-decoration: none;
         }
 
@@ -198,8 +203,12 @@
         </div>
         <div class="nav-icons">
             <a href="https://link-to-cv.pdf" download>Download CV</a>
-            <a href="https://linkedin.com/in/sufi-sheikh"><img src="https://link-to-linkedin-icon.png" alt="LinkedIn" width="24"></a>
-            <a href="https://naukri.com/sufi-sheikh"><img src="https://link-to-naukri-icon.png" alt="Naukri" width="24"></a>
+            <a href="https://www.linkedin.com/in/sufi-sheikh-sk">
+                <img src="linkdin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.naukri.com/mnjuser/profile?id=&altresid">
+                <img src="Naukri.png" alt="Naukri">
+            </a>
         </div>
     </nav>
 
@@ -241,7 +250,7 @@
     <!-- Contact Section -->
     <footer id="contact">
         <p>Contact me: <a href="mailto:sufi@example.com">sufi@example.com</a></p>
-        <p>Find me on <a href="https://github.com/sufisheikh01">GitHub</a> | <a href="https://linkedin.com/in/sufi-sheikh">LinkedIn</a></p>
+        <p>Find me on <a href="https://github.com/sufisheikh01">GitHub</a> | <a href="https://www.linkedin.com/in/sufi-sheikh-sk">LinkedIn</a></p>
     </footer>
 </body>
 
