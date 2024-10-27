@@ -11,10 +11,10 @@
     <style>
         /* Theme Colors */
         :root {
-            --nav-background: #4B6584; /* Soft dark blue for nav bar */
-            --primary-background: #FFFFFF; /* Clean white for main section */
-            --highlight: #3FC1C9; /* Soft teal for highlights */
-            --text-color: #333333;
+            --nav-background: #1B1B1B; /* Black for navbar */
+            --primary-background: #F5F5F5; /* Off-white for main background */
+            --highlight: #A52A2A; /* Light maroon for highlights */
+            --text-color: #333333; /* Dark text color for contrast */
         }
 
         /* Global Styling */
@@ -31,7 +31,6 @@
         /* Navbar */
         nav {
             background-color: var(--nav-background);
-            color: white;
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
@@ -45,12 +44,17 @@
             color: white;
             text-decoration: none;
             font-weight: 500;
-            margin: 0 15px;
-            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            margin: 0 10px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.05);
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
         }
 
         nav a:hover {
-            color: var(--highlight);
+            background-color: var(--highlight);
+            color: var(--primary-background);
         }
 
         .nav-icons {
@@ -73,7 +77,7 @@
         .hero {
             text-align: center;
             padding: 5rem 1rem;
-            background-color: var(--primary-background); /* Separate color from navbar */
+            background-color: var(--primary-background);
             color: var(--text-color);
         }
 
@@ -92,7 +96,7 @@
         /* About Section */
         #about {
             padding: 3rem 1rem;
-            background-color: var(--primary-background); /* Clean white background */
+            background-color: var(--primary-background);
             text-align: center;
         }
 
@@ -114,7 +118,7 @@
         #interests {
             padding: 2rem 1rem;
             text-align: center;
-            background-color: #FFF5E1;
+            background-color: #F5F5F5;
         }
 
         #interests ul {
@@ -127,7 +131,7 @@
         }
 
         #interests ul li {
-            background-color: #FFF5E1;
+            background-color: #FFFFFF;
             padding: 15px 20px;
             border-radius: 8px;
             margin: 10px;
@@ -169,7 +173,7 @@
         }
 
         #projects ul li:hover {
-            background-color: #6FA9C7;
+            background-color: #A05A5A;
         }
 
         /* Contact Section */
@@ -204,7 +208,7 @@
         <div class="nav-icons">
             <a href="https://link-to-cv.pdf" download>Download CV</a>
             <a href="https://www.linkedin.com/in/sufi-sheikh-sk">
-                <img src="Linkdin.png" alt="LinkedIn">
+                <img src="linkdin.png" alt="LinkedIn">
             </a>
             <a href="https://www.naukri.com/mnjuser/profile?id=&altresid">
                 <img src="Naukri.png" alt="Naukri">
