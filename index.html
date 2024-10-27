@@ -6,187 +6,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sufi Sheikh's Portfolio</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji|Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Meyawo Theme Colors */
+        /* Theme Colors */
         :root {
-            --primary: #695aa6; /* Indigo/purple */
-            --secondary: #393e46; /* Dark gray */
-            --light: #f8f9fa; /* Light background */
-            --dark: #212529; /* Dark background */
-            --accent: #5cdb95; /* Accent green */
-            --text-color: #333333; /* Default text color */
+            --primary: #4B6584; /* Soft dark blue */
+            --secondary: #F7D794; /* Light gold accent */
+            --background: #F4F4F9; /* Subtle background */
+            --dark-text: #333333; /* Dark text color */
+            --highlight: #3FC1C9; /* Highlight color for sections */
         }
 
         /* Global Styling */
         body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--light);
-            color: var(--text-color);
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background);
+            color: var(--dark-text);
             margin: 0;
             padding: 0;
-            line-height: 1.6; /* Improves readability */
-            scroll-behavior: smooth; /* Ensures smooth scrolling */
+            scroll-behavior: smooth;
+            line-height: 1.6;
         }
 
         /* Navbar */
         nav {
-            background-color: var(--dark);
-            padding: 1rem;
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        /* Navbar links styled as rounded buttons */
         nav a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #393e46; /* Light gray background for the buttons */
             color: white;
-            margin: 0 10px;
-            border-radius: 25px;
             text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+            font-weight: 500;
+            margin: 0 15px;
+            transition: color 0.3s;
         }
 
-        /* Download CV Button */
-        .cv-button {
-            background-color: var(--accent); /* Accent color */
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            padding: 10px 20px;
+        nav a:hover {
+            color: var(--secondary);
         }
 
-        /* Hover effects for buttons */
-        nav a:hover,
-        .cv-button:hover {
-            background-color: #495057;
+        .nav-icons a {
+            margin-left: 15px;
+            font-size: 1.2rem;
         }
 
-        /* Header Section */
-        header {
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 5rem 1rem;
             background-color: var(--primary);
             color: white;
-            padding: 4rem 1rem;
-            text-align: center;
         }
 
-        header h1 {
-            font-size: 2.5rem;
+        .hero h1 {
+            font-size: 3rem;
             margin: 0;
         }
 
-        header p {
+        .hero p {
             font-size: 1.25rem;
             margin-top: 1rem;
         }
 
-        /* Section Styling */
-        section {
-            padding: 2rem 1rem;
-            margin: 2rem auto;
-            background-color: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            max-width: 1000px;
-            border-radius: 10px;
-        }
-
-        h2 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
+        /* About Section with Circle Shape */
+        #about {
+            padding: 3rem 1rem;
             text-align: center;
         }
 
-        /* Interests Section Styling */
+        .about-circle {
+            background-color: var(--highlight);
+            color: white;
+            padding: 2rem;
+            max-width: 300px;
+            margin: 0 auto;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            position: relative;
+            top: -50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Interests Section */
+        #interests {
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: -40px;
+        }
+
         #interests ul {
             list-style: none;
             padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         #interests ul li {
-            background-color: #e8f0fe;
-            padding: 10px 20px;
-            margin: 10px 0;
-            border-radius: 15px;
-            width: 80%;
-            text-align: center;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #FFF5E1;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-weight: 500;
         }
 
-        /* Project Section Styling (Hyperlinks) */
+        /* Projects Section with Color Change */
+        #projects {
+            padding: 3rem 1rem;
+            background-color: var(--highlight);
+            color: white;
+            text-align: center;
+        }
+
         #projects ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        #projects ul li {
+            background-color: var(--primary);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            width: 150px;
+            font-weight: 500;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
         }
 
         #projects ul li a {
+            color: var(--secondary);
             text-decoration: none;
-            color: #695aa6;
-            font-weight: bold;
         }
 
-        #projects ul li a:hover {
-            color: #393e46;
+        #projects ul li:hover {
+            background-color: #6FA9C7;
         }
 
-        /* Footer */
+        /* Contact Section */
         footer {
-            background-color: var(--dark);
+            background-color: var(--primary);
             color: white;
             text-align: center;
             padding: 2rem 1rem;
         }
 
         footer a {
-            color: white;
+            color: var(--secondary);
             text-decoration: none;
-            font-weight: bold;
         }
 
         footer a:hover {
+            color: white;
             text-decoration: underline;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            header p {
-                font-size: 1rem;
-            }
-
-            nav a {
-                padding: 8px 15px;
-            }
-
-            #interests ul li {
-                width: 90%;
-            }
-
-            section {
-                padding: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav a {
-                padding: 5px 10px;
-            }
-
-            .cv-button {
-                top: 5px;
-                right: 10px;
-                padding: 5px 10px;
-            }
         }
     </style>
 </head>
@@ -195,27 +180,30 @@
     <!-- Navbar -->
     <nav>
         <div>
-            <a href="#about">About Me</a>
-            <a href="#interests">My Interests</a>
+            <a href="#home">Home</a>
             <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
         </div>
-        <a href="sufi_sheikh_cv.pdf" class="cv-button" download>Download CV</a>
+        <div class="nav-icons">
+            <a href="https://linkedin.com/in/sufi-sheikh"><img src="https://link-to-linkedin-icon.png" alt="LinkedIn" width="24"></a>
+            <a href="https://naukri.com/sufi-sheikh"><img src="https://link-to-naukri-icon.png" alt="Naukri" width="24"></a>
+        </div>
     </nav>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Sufi Sheikh</h1>
-        <p>Data Enthusiast | Decision Making | Data Visualization</p>
-    </header>
-
-    <!-- About Me Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome! I’m Sufi Sheikh, a passionate data enthusiast focused on transforming data into actionable insights. Proficient in SQL, SAS, and visualization tools like Power BI, I bring a unique blend of technical and analytical skills.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Hi, I am Sufi</h1>
+        <p>Data Analyst | Business Analyst | AI & ML Enthusiast</p>
     </section>
 
-    <!-- My Interests Section -->
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-circle">
+            <p>Welcome! I'm Sufi Sheikh, a passionate data enthusiast focused on transforming data into actionable insights. Proficient in SQL, SAS, and visualization tools like Power BI.</p>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
     <section id="interests">
         <h2>My Interests</h2>
         <ul>
@@ -228,23 +216,16 @@
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>Projects</h2>
-        <h3>SQL Projects</h3>
+        <h2>My Projects</h2>
         <ul>
-            <li><a href="about:blank">Spending Behavior Analysis</a></li>
-            <li><a href="about:blank">Transaction Analysis</a></li>
-        </ul>
-        <h3>SAS Projects</h3>
-        <ul>
-            <li><a href="about:blank">Customer Segmentation</a></li>
-        </ul>
-        <h3>Data Visualization</h3>
-        <ul>
-            <li><a href="about:blank">IPL Analysis</a></li>
+            <li><a href="project1.pdf" download>Spending Behavior Analysis</a></li>
+            <li><a href="project2.pdf" download>Transaction Analysis</a></li>
+            <li><a href="project3.pdf" download>Customer Segmentation</a></li>
+            <li><a href="project4.pdf" download>IPL Analysis</a></li>
         </ul>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Contact Section -->
     <footer id="contact">
         <p>Contact me: <a href="mailto:sufi@example.com">sufi@example.com</a></p>
         <p>Find me on <a href="https://github.com/sufisheikh01">GitHub</a> | <a href="https://linkedin.com/in/sufi-sheikh">LinkedIn</a></p>
