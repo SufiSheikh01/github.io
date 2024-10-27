@@ -11,18 +11,18 @@
     <style>
         /* Theme Colors */
         :root {
-            --primary: #4B6584; /* Soft dark blue */
-            --secondary: #F7D794; /* Light gold accent */
-            --background: #F4F4F9; /* Subtle background */
-            --dark-text: #333333; /* Dark text color */
-            --highlight: #3FC1C9; /* Highlight color for sections */
+            --nav-background: #4B6584; /* Soft dark blue for nav bar */
+            --primary-background: #FFFFFF; /* Clean white for main section */
+            --highlight: #3FC1C9; /* Soft teal for highlights */
+            --secondary-background: #F7D794; /* Light gold for about/interests */
+            --text-color: #333333;
         }
 
         /* Global Styling */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--background);
-            color: var(--dark-text);
+            background-color: var(--primary-background);
+            color: var(--text-color);
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
@@ -31,12 +31,15 @@
 
         /* Navbar */
         nav {
-            background-color: var(--primary);
+            background-color: var(--nav-background);
             color: white;
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav a {
@@ -48,7 +51,12 @@
         }
 
         nav a:hover {
-            color: var(--secondary);
+            color: var(--secondary-background);
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
         }
 
         .nav-icons a {
@@ -56,27 +64,30 @@
             font-size: 1.2rem;
         }
 
-        /* Hero Section */
+        /* Hero Section - Intro */
         .hero {
             text-align: center;
             padding: 5rem 1rem;
-            background-color: var(--primary);
-            color: white;
+            background-color: var(--primary-background); /* Separate color from navbar */
+            color: var(--text-color);
         }
 
         .hero h1 {
             font-size: 3rem;
+            color: var(--nav-background);
             margin: 0;
         }
 
         .hero p {
             font-size: 1.25rem;
+            color: var(--highlight);
             margin-top: 1rem;
         }
 
         /* About Section with Circle Shape */
         #about {
             padding: 3rem 1rem;
+            background-color: var(--secondary-background);
             text-align: center;
         }
 
@@ -98,7 +109,7 @@
         #interests {
             padding: 2rem 1rem;
             text-align: center;
-            margin-top: -40px;
+            background-color: #FFF5E1;
         }
 
         #interests ul {
@@ -137,7 +148,7 @@
         }
 
         #projects ul li {
-            background-color: var(--primary);
+            background-color: var(--nav-background);
             padding: 20px;
             border-radius: 10px;
             margin: 10px;
@@ -148,7 +159,7 @@
         }
 
         #projects ul li a {
-            color: var(--secondary);
+            color: var(--secondary-background);
             text-decoration: none;
         }
 
@@ -158,14 +169,14 @@
 
         /* Contact Section */
         footer {
-            background-color: var(--primary);
+            background-color: var(--nav-background);
             color: white;
             text-align: center;
             padding: 2rem 1rem;
         }
 
         footer a {
-            color: var(--secondary);
+            color: var(--secondary-background);
             text-decoration: none;
         }
 
@@ -181,10 +192,12 @@
     <nav>
         <div>
             <a href="#home">Home</a>
+            <a href="#about">About Me</a>
             <a href="#projects">Projects</a>
-            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </div>
         <div class="nav-icons">
+            <a href="https://link-to-cv.pdf" download>Download CV</a>
             <a href="https://linkedin.com/in/sufi-sheikh"><img src="https://link-to-linkedin-icon.png" alt="LinkedIn" width="24"></a>
             <a href="https://naukri.com/sufi-sheikh"><img src="https://link-to-naukri-icon.png" alt="Naukri" width="24"></a>
         </div>
