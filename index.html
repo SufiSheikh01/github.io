@@ -1,26 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smooth Scroll Transition</title>
-    <!-- Link to CSS file -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Sufi Sheikh's Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
+
 <body>
-    <!-- Intro Section -->
-    <section class="intro">
-        <h1>Welcome to My Page</h1>
-        <p>This is the intro section.</p>
+    <!-- Navbar -->
+    <nav>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-icons">
+            <a href="{{ url_for('static', filename='Sufi_Sheikh_CV.pdf') }}" download>Download CV</a>
+            <a href="https://www.linkedin.com/in/sufi-sheikh-sk">
+                <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn">
+            </a>
+            <a href="https://www.naukri.com/mnjuser/profile?id=&altresid">
+                <img src="{{ url_for('static', filename='images/naukri.png') }}" alt="Naukri">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Hi, I am Sufi</h1>
+        <p>Data Analyst | Business Analyst | AI & ML Enthusiast</p>
     </section>
 
     <!-- About Section -->
-    <section class="about">
-        <h2>About Me</h2>
-        <p>This section will slide in when you scroll down.</p>
+    <section id="about">
+        <div class="about-circle">
+            <p>Welcome! I'm Sufi Sheikh, a passionate data enthusiast focused on transforming data into actionable insights. Proficient in SQL, SAS, and visualization tools like Power BI.</p>
+        </div>
     </section>
 
-    <!-- Link to JavaScript file -->
-    <script src="script.js"></script>
+    <!-- Interests Section -->
+    <section id="interests">
+        <h2>My Interests</h2>
+        <ul>
+            <li>Data Analytics</li>
+            <li>SQL Optimization</li>
+            <li>Business Intelligence</li>
+            <li>AI & Machine Learning</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <ul>
+            <li><a href="{{ url_for('static', filename='projects/project1.pdf') }}" download>Spending Behavior Analysis</a></li>
+            <li><a href="{{ url_for('static', filename='projects/project2.pdf') }}" download>Transaction Analysis</a></li>
+            <li><a href="{{ url_for('static', filename='projects/project3.pdf') }}" download>Customer Segmentation</a></li>
+            <li><a href="{{ url_for('static', filename='projects/project4.pdf') }}" download>IPL Analysis</a></li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact">
+        <p>Contact me: <a href="mailto:sufi@example.com">sufi@example.com</a></p>
+        <p>Find me on <a href="https://github.com/sufisheikh01">GitHub</a> | <a href="https://www.linkedin.com/in/sufi-sheikh-sk">LinkedIn</a></p>
+    </footer>
 </body>
+
 </html>
