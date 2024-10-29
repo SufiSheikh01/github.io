@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 15px;
+}
+
+.nav-left a, .nav-right a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+  background-color: #bb0a1e;
+}
+
+.intro, .about-me, .projects, .contact {
+  padding: 50px;
+  text-align: center;
+}
+
+.intro {
+  background-color: #222;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-me, .projects, .contact {
+  background-color: #fff;
+}
+
+.project-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.project-item {
+  padding: 15px;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.project-item:hover {
+  background-color: #bb0a1e;
+  color: #fff;
+}
