@@ -1,9 +1,9 @@
 /* Theme Colors */
 :root {
-    --nav-background: #1B1B1B;
-    --primary-background: #F5F5F5;
-    --highlight: #A52A2A;
-    --text-color: #333333;
+    --nav-background: #1B1B1B; /* Black for navbar */
+    --primary-background: #F5F5F5; /* Off-white for main background */
+    --highlight: #A52A2A; /* Light maroon for highlights */
+    --text-color: #333333; /* Dark text color for contrast */
 }
 
 /* Global Styling */
@@ -38,11 +38,22 @@ nav a {
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.05);
     transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
 }
 
 nav a:hover {
     background-color: var(--highlight);
     color: var(--primary-background);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons a {
+    margin-left: 15px;
+    font-size: 1.2rem;
 }
 
 .nav-icons img {
@@ -51,7 +62,12 @@ nav a:hover {
     vertical-align: middle;
 }
 
-/* Hero Section */
+/* Theme Selector */
+.theme-selector {
+    margin-left: 20px;
+}
+
+/* Hero Section - Intro */
 .hero {
     text-align: center;
     padding: 5rem 1rem;
@@ -62,9 +78,22 @@ nav a:hover {
 .hero h1 {
     font-size: 3rem;
     color: var(--nav-background);
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--highlight);
+    margin-top: 1rem;
 }
 
 /* About Section */
+#about {
+    padding: 3rem 1rem;
+    background-color: var(--primary-background);
+    text-align: center;
+}
+
 .about-circle {
     background-color: var(--highlight);
     color: white;
@@ -74,20 +103,71 @@ nav a:hover {
     border-radius: 50%;
     font-size: 1.1rem;
     line-height: 1.5;
+    position: relative;
+    top: -50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Interests and Projects Sections */
-#interests, #projects {
+/* Interests Section */
+#interests {
+    padding: 2rem 1rem;
     text-align: center;
+    background-color: #F5F5F5;
+}
+
+#interests ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#interests ul li {
+    background-color: #FFFFFF;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+/* Projects Section */
+#projects {
+    padding: 3rem 1rem;
+    background-color: var(--highlight);
+    color: white;
+    text-align: center;
+}
+
+#projects ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 #projects ul li {
     background-color: var(--nav-background);
     padding: 20px;
     border-radius: 10px;
+    margin: 10px;
     width: 150px;
+    font-weight: 500;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#projects ul li a {
+    color: var(--primary-background);
+    text-decoration: none;
+}
+
+#projects ul li:hover {
+    background-color: #A05A5A;
 }
 
 /* Contact Section */
@@ -101,4 +181,9 @@ footer {
 footer a {
     color: var(--highlight);
     text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
 }
