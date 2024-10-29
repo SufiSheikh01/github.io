@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sufi Sheikh's Portfolio</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <!-- Navbar -->
     <nav>
@@ -20,13 +19,22 @@
             <a href="#contact">Contact</a>
         </div>
         <div class="nav-icons">
-            <a href="{{ url_for('static', filename='Sufi_Sheikh_CV.pdf') }}" download>Download CV</a>
+            <a href="https://link-to-cv.pdf" download>Download CV</a>
             <a href="https://www.linkedin.com/in/sufi-sheikh-sk">
-                <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn">
+                <img src="linkedin.png" alt="LinkedIn">
             </a>
             <a href="https://www.naukri.com/mnjuser/profile?id=&altresid">
-                <img src="{{ url_for('static', filename='images/naukri.png') }}" alt="Naukri">
+                <img src="naukri.png" alt="Naukri">
             </a>
+        </div>
+        <!-- Theme Selector -->
+        <div class="theme-selector">
+            <label for="theme">Theme:</label>
+            <select id="theme" onchange="changeTheme()">
+                <option value="default">Default</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
         </div>
     </nav>
 
@@ -58,10 +66,10 @@
     <section id="projects">
         <h2>My Projects</h2>
         <ul>
-            <li><a href="{{ url_for('static', filename='projects/project1.pdf') }}" download>Spending Behavior Analysis</a></li>
-            <li><a href="{{ url_for('static', filename='projects/project2.pdf') }}" download>Transaction Analysis</a></li>
-            <li><a href="{{ url_for('static', filename='projects/project3.pdf') }}" download>Customer Segmentation</a></li>
-            <li><a href="{{ url_for('static', filename='projects/project4.pdf') }}" download>IPL Analysis</a></li>
+            <li><a href="project1.pdf" download>Spending Behavior Analysis</a></li>
+            <li><a href="project2.pdf" download>Transaction Analysis</a></li>
+            <li><a href="project3.pdf" download>Customer Segmentation</a></li>
+            <li><a href="project4.pdf" download>IPL Analysis</a></li>
         </ul>
     </section>
 
@@ -70,6 +78,8 @@
         <p>Contact me: <a href="mailto:sufi@example.com">sufi@example.com</a></p>
         <p>Find me on <a href="https://github.com/sufisheikh01">GitHub</a> | <a href="https://www.linkedin.com/in/sufi-sheikh-sk">LinkedIn</a></p>
     </footer>
-</body>
 
+    <!-- Link to external JS -->
+    <script src="script.js"></script>
+</body>
 </html>
