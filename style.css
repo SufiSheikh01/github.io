@@ -1,67 +1,28 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Basic styles for body */
 body {
-  font-family: 'Montserrat', sans-serif;
-  color: #333;
-  background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: #333;
-  padding: 15px;
-}
-
-.nav-left a, .nav-right a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 20px;
-}
-
-.nav-left a:hover, .nav-right a:hover {
-  background-color: #bb0a1e;
-}
-
-.intro, .about-me, .projects, .contact {
-  padding: 50px;
-  text-align: center;
-}
-
+/* Intro Section styling */
 .intro {
-  background-color: #222;
-  color: #fff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    padding: 50px;
+    background-color: #f0f0f0;
+    text-align: center;
 }
 
-.about-me, .projects, .contact {
-  background-color: #fff;
+/* About Section styling */
+.about {
+    padding: 50px;
+    background-color: #d0e8f2;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.project-list {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.project-item {
-  padding: 15px;
-  background-color: #e8e8e8;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.project-item:hover {
-  background-color: #bb0a1e;
-  color: #fff;
+/* When the about section is in view */
+.about.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
