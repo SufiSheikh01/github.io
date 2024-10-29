@@ -1,28 +1,104 @@
-/* Basic styles for body */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Theme Colors */
+:root {
+    --nav-background: #1B1B1B;
+    --primary-background: #F5F5F5;
+    --highlight: #A52A2A;
+    --text-color: #333333;
 }
 
-/* Intro Section styling */
-.intro {
-    padding: 50px;
-    background-color: #f0f0f0;
+/* Global Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-background);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    background-color: var(--nav-background);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--highlight);
+    color: var(--primary-background);
+}
+
+.nav-icons img {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
+    background-color: var(--primary-background);
+    color: var(--text-color);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--nav-background);
+}
+
+/* About Section */
+.about-circle {
+    background-color: var(--highlight);
+    color: white;
+    padding: 2rem;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Interests and Projects Sections */
+#interests, #projects {
     text-align: center;
 }
 
-/* About Section styling */
-.about {
-    padding: 50px;
-    background-color: #d0e8f2;
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+#projects ul li {
+    background-color: var(--nav-background);
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* When the about section is in view */
-.about.in-view {
-    opacity: 1;
-    transform: translateY(0);
+/* Contact Section */
+footer {
+    background-color: var(--nav-background);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer a {
+    color: var(--highlight);
+    text-decoration: none;
 }
